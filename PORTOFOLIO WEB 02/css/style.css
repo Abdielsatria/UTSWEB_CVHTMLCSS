@@ -1,0 +1,372 @@
+/* Ini adalah stylesheet CSS */
+
+/* Mengimpor font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Styling global untuk seluruh elemen HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Deklarasi variabel CSS */
+:root {
+    --bg-color: #1f242d;               /* Warna latar belakang */
+    --second-bg-color: #323946;        /* Warna latar belakang kedua */
+    --text-color: #fff;               /* Warna teks */
+    --main-color: #0ef;               /* Warna utama */
+}
+
+/* Styling pada elemen html */
+html {
+    font-size: 62.5%;                  /* Menetapkan ukuran font dasar (10px) */
+    overflow-x: hidden;                /* Menghilangkan scroll horizontal */
+}
+    
+/* Styling pada elemen body */
+body {
+    background: var(--bg-color);       /* Menggunakan warna latar belakang */
+    color: var(--text-color);          /* Menggunakan warna teks */
+}
+
+/* Styling untuk elemen section */
+section {
+    min-height: 100%;                  /* Set tinggi minimum sebesar 100% */
+    padding: 10rem 9% 2rem;            /* Ruang padding atas, samping, dan bawah */
+}
+
+/* Styling untuk elemen header */
+.header {
+    position: fixed;                   /* Diberi posisi tetap */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;                 /* Ruang padding atas dan samping */
+    background: var(--bg-color);       /* Menggunakan warna latar belakang */
+    display: flex;
+    justify-content: space-between;    /* Membuat jarak seimbang antara elemen */
+    align-items: center;
+    z-index: 100;                      /* Z-index untuk tumpukan elemen */
+}
+
+/* Styling untuk elemen logo */
+.logo {
+    font-size: 2.5rem;                 /* Ukuran font */
+    color: var(--text-color);          /* Menggunakan warna teks */
+    font-weight: 600;                  /* Ketebalan font */
+    cursor: default;                   /* Kursor default */
+}
+
+/* Styling untuk tautan navbar */
+.navbar a {
+    font-size: 1.7rem;                 /* Ukuran font */
+    color: var(--text-color);          /* Menggunakan warna teks */
+    margin-left: 4rem;                 /* Jarak kiri */
+    transition: .3s;                   /* Transisi 0.3 detik */
+}
+
+/* Efek hover dan aktif pada tautan navbar */
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color);          /* Menggunakan warna utama saat hover/aktif */
+}
+
+/* Styling untuk ikon menu */
+#menu-icons {
+    font-size: 3.6rem;                 /* Ukuran font */
+    color: var(--text-color);          /* Menggunakan warna teks */
+    display: none;                     /* Tidak ditampilkan */
+}
+
+/* Styling untuk bagian home */
+.home {
+    display: flex;                     /* Diberi display fleksibel */
+    justify-content: center;           /* Tengah horizontal */
+    align-items: center;               /* Tengah vertikal */
+}
+
+/* Styling untuk gambar di bagian home */
+.home-img img {
+    width: 35vw;                       /* Lebar gambar 35% dari lebar tampilan */
+}
+
+/* Styling untuk konten di bagian home */
+.home-content h3 {
+    font-size: 3.2rem;                 /* Ukuran font */
+    font-weight: 700;                  /* Ketebalan font */
+}
+
+/* Styling untuk teks kedua di bagian home */
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;              /* Ruang bawah 2 rem */
+}
+
+/* Styling untuk elemen span */
+span {
+    color: var(--main-color);         /* Menggunakan warna utama */
+}
+
+/* Styling untuk teks utama di bagian home */
+.home-content h1 {
+    font-size: 5.6rem;                /* Ukuran font */
+    font-weight: 700;                 /* Ketebalan font */
+    line-height: 1.3;                 /* Tinggi baris */
+}
+
+/* Styling untuk teks paragraf di bagian home */
+.home-content p {
+    font-size: 1.6rem;                /* Ukuran font */
+}
+
+/* Styling untuk media sosial di bagian home */
+.social-media a {
+    display: inline-flex;              /* Diberi display fleksibel */
+    justify-content: center;          /* Tengah horizontal */
+    align-items: center;              /* Tengah vertikal */
+    width: 4rem;                      /* Lebar 4 rem */
+    height: 4rem;                     /* Tinggi 4 rem */
+    background: transparent;          /* Latar belakang transparan */
+    border: .2rem solid var(--main-color); /* Garis tepi dengan warna utama */
+    border-radius: 50%;               /* Lingkaran dengan border-radius */
+    font-size: 2rem;                  /* Ukuran font */
+    color: var(--main-color);         /* Menggunakan warna utama */
+    margin: 5rem 1.5rem 3rem 0;       /* Jarak dari sisi */
+    transition: .5s ease;             /* Transisi 0.5 detik dengan efek mudah */
+}
+
+/* Efek hover pada media sosial */
+.social-media a:hover {
+    background: var(--main-color);    /* Menggunakan warna utama saat hover */
+    color: var(--second-bg-color);    /* Menggunakan warna latar belakang kedua saat hover */
+    box-shadow: 0 0 1rem var(--main-color); /* Bayangan dengan warna utama saat hover */
+}
+
+/* Styling untuk tombol */
+.btn {
+    display: inline-block;            /* Diberi display inline-block */
+    padding: 1rem 2.8rem;             /* Ruang padding atas dan bawah, samping */
+    background: var(--main-color);    /* Menggunakan warna utama */
+    border-radius: 4rem;              /* Border-radius 4 rem */
+    box-shadow: 0 0 1rem var(--main-color); /* Bayangan dengan warna utama */
+    font-size: 1.6rem;                /* Ukuran font */
+    color: var(--second-bg-color);    /* Menggunakan warna latar belakang kedua */
+    letter-spacing: .1rem;            /* Jarak antar huruf */
+    font-weight: 600;                 /* Ketebalan font */
+    transition: .5s ease;             /* Transisi 0.5 detik dengan efek mudah */
+}
+
+/* Efek hover pada tombol */
+.btn:hover {
+    box-shadow: none;                 /* Menghilangkan bayangan saat hover */
+}
+
+/* Styling untuk bagian about */
+.about {
+    display: flex;                    /* Diberi display fleksibel */
+    justify-content: center;          /* Tengah horizontal */
+    align-items: center;              /* Tengah vertikal */
+    gap: 2rem;                        /* Jarak antar elemen 2 rem */
+    background: var(--second-bg-color); /* Menggunakan warna latar belakang kedua */
+}
+
+/* Styling untuk gambar di bagian about */
+.about-img img {
+    width: 35vw;                      /* Lebar gambar 35% dari lebar tampilan */
+}
+
+/* Styling untuk judul di bagian about */
+.heading {
+    text-align: center;               /* Teks rata tengah */
+    font-size: 4.5rem;               /* Ukuran font */
+}
+
+/* Styling untuk konten di bagian about */
+.about-content h2 {
+    text-align: left;                /* Teks rata kiri */
+    line-height: 1.2;                /* Tinggi baris */
+}
+
+/* Styling untuk teks h3 di bagian about */
+.about-content h3 {
+    font-size: 2.6rem;               /* Ukuran font */
+}
+
+/* Styling untuk teks paragraf di bagian about */
+.about-content p {
+    font-size: 1.6rem;               /* Ukuran font */
+    margin: 2rem 0 3rem;             /* Ruang atas, bawah, bawah 3 rem */
+}
+
+/* Styling untuk judul di bagian services */
+.services h2 {
+    margin-bottom: 5rem;             /* Ruang bawah 5 rem */
+}
+
+/* Styling untuk kontainer layanan */
+.services-container {
+    display: flex;                   /* Diberi display fleksibel */
+    justify-content: center;         /* Tengah horizontal */
+    align-items: center;             /* Tengah vertikal */
+    flex-wrap: wrap;                 /* Wrap elemen jika tidak cukup lebar */
+    gap: 2rem;                       /* Jarak antar elemen 2 rem */
+}
+
+/* Styling untuk kotak layanan */
+.services-container .services-box {
+    flex: 1 1 30rem;                 /* Flexbox dengan lebar minimum 30 rem */
+    background: var(--second-bg-color); /* Menggunakan warna latar belakang kedua */
+    padding: 3rem 2rem 4rem;         /* Ruang padding atas, samping, bawah */
+    border-radius: 2rem;             /* Border-radius 2 rem */
+    text-align: center;              /* Teks rata tengah */
+    border: .2rem solid var(--bg-color); /* Garis tepi dengan warna latar belakang */
+    transition: .5s ease;            /* Transisi 0.5 detik dengan efek mudah */
+}
+
+/* Efek hover pada kotak layanan */
+.services-container .services-box:hover {
+    border-color: var(--main-color); /* Menggunakan warna utama saat hover */
+    transform: scale(1.02);          /* Skala elemen saat hover */
+}
+
+/* Styling untuk ikon di kotak layanan */
+.services-box i {
+    font-size: 7rem;                 /* Ukuran font */
+    color: var(--main-color);        /* Menggunakan warna utama */
+}
+
+/* Styling untuk teks judul di kotak layanan */
+.services-box h3 {
+    font-size: 2.6rem;               /* Ukuran font */
+}
+
+/* Styling untuk teks paragraf di kotak layanan */
+.services-box p {
+    font-size: 1.6rem;               /* Ukuran font */
+    margin: 1rem 0 3rem;             /* Ruang atas, bawah, bawah 3 rem */
+}
+
+/* Styling untuk bagian portofolio */
+.portofolio {
+    background: var(--second-bg-color); /* Menggunakan warna latar belakang kedua */
+}
+
+/* Styling untuk judul di bagian portofolio */
+.portofolio h2 {
+    margin-bottom: 4rem;             /* Ruang bawah 4 rem */
+}
+
+/* Styling untuk kontainer portofolio */
+.portofolio-container {
+    display: grid;                   /* Diberi display grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan ukuran yang sama */
+    align-items: center;             /* Tengah vertikal */
+    gap: 2.5rem;                     /* Jarak antar elemen 2.5 rem */
+}
+
+/* Styling untuk kotak portofolio */
+.portofolio-container .portofolio-box {
+    position: relative;              /* Diberi posisi relatif */
+    border-radius: 2rem;             /* Border-radius 2 rem */
+    box-shadow: 0 0 1rem var(--bg-color); /* Bayangan dengan warna latar belakang */
+    overflow: hidden;                /* Menghilangkan overflow */
+    display: flex;                   /* Diberi display fleksibel */
+}
+
+/* Styling untuk gambar di kotak portofolio */
+.portofolio-box img {
+    width: 100%;                     /* Lebar gambar 100% dari elemen */
+}
+
+/* Efek hover pada gambar di kotak portofolio */
+.portofolio-box img:hover {
+    transform: scale(1.1);           /* Skala gambar saat hover */
+}
+
+/* Styling untuk lapisan di kotak portofolio */
+.portofolio-box .portofolio-layer {
+    position: absolute;              /* Diberi posisi absolut */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color)); /* Latar belakang gradasi */
+    display: flex;                   /* Diberi display fleksibel */
+    justify-content: center;         /* Tengah horizontal */
+    align-items: center;             /* Tengah vertikal */
+    flex-direction: column;          /* Susunan elemen dalam kolom */
+    text-align: center;              /* Teks rata tengah */
+    padding: 0 4rem;                /* Ruang padding atas, samping */
+    transform: translateY(100%);     /* Translasi elemen ke bawah */
+    transition: .5s ease;            /* Transisi 0.5 detik dengan efek mudah */
+}
+
+/* Efek hover pada lapisan di kotak portofolio */
+.portofolio-box:hover .portofolio-layer { 
+    transform: translateY(0%);       /* Translasi elemen ke atas saat hover */
+}
+
+/* Styling untuk judul di lapisan portofolio */
+.portofolio-layer h4 {
+    font-size: 3rem;                 /* Ukuran font */
+}
+
+/* Styling untuk teks paragraf di lapisan portofolio */
+.portofolio-layer p {
+    font-size: 1.6rem;               /* Ukuran font */
+    margin: 3rem 0 1rem;             /* Ruang atas, bawah, atas 1 rem */
+}
+
+/* Styling untuk elemen tanda silang di lapisan portofolio */
+.portofolio-layer s {
+    display: inline-flex;            /* Diberi display fleksibel */
+    justify-content: center;        /* Tengah horizontal */
+    align-items: center;            /* Tengah vertikal */
+    width: 5rem;                    /* Lebar 5 rem */
+    height: 5rem;                   /* Tinggi 5 rem */
+    background: var(--text-color);  /* Menggunakan warna teks */
+    border-radius: 50%;             /* Lingkaran dengan border-radius */
+}
+
+/* Styling untuk ikon dalam elemen tanda silang */
+.portofolio-layer a i {
+    font-size: 2rem;                /* Ukuran font */
+    color: var(--second-bg-color);  /* Menggunakan warna latar belakang kedua */
+}
+
+/* Styling untuk bagian contact */
+.contact h2 {
+    margin-bottom: 3rem;             /* Ruang bawah 3 rem */
+}
+
+/* Styling untuk formulir di bagian contact */
+.contact form {
+    max-width: 70rem;                /* Lebar maksimum 70 rem */
+    margin: 1rem auto;               /* Ruang margin atas dan bawah */
+    text-align: center;              /* Teks rata tengah */
+    margin-bottom: 3rem;             /* Ruang bawah 3 rem */
+}
+
+/* Styling untuk kotak input dalam formulir contact */
+.contact form .input-box {
+    display: flex;                   /* Diberi display fleksibel */
+    justify-content: space-around;   /* Ruang sekitar elemen */
+    flex-wrap: wrap;                 /* Wrap elemen jika tidak cukup lebar */
+}
+
+/* Styling untuk input dan textarea dalam formulir contact */
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;                     /* Lebar 100% dari elemen */
+    padding: 1.5rem;                 /* Ruang padding atas, bawah, samping */
+    font-size: 1.6rem;               /* Ukuran font */
+    color: var(--text-color);        /* Menggunakan warna teks */
+    background: var(--second-bg-color); /* Menggunakan warna latar belakang kedua */
+    border-radius: .8rem;            /* Border-radius 0.8 rem */
+    margin: .7rem 0;                 /* Ruang atas, bawah 0.7 rem */
+}
